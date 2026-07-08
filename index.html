@@ -62,7 +62,7 @@
         /* 메인 컨테이너 */
         main {
             padding: 24px 16px;
-            max-width: 500px; /* 모바일 한손 가독성을 위한 최적 폭 제한 */
+            max-width: 500px;
             margin: 0 auto;
         }
 
@@ -99,6 +99,18 @@
             font-size: 0.95rem;
             color: #666666;
             padding: 0 8px;
+        }
+
+        .hero-contact {
+            margin-top: 16px;
+            display: inline-block;
+            background-color: #fff5eb;
+            border: 1px solid #ffd8a8;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #e85d04;
         }
 
         /* 단원 세션 공통 */
@@ -167,6 +179,56 @@
             font-weight: bold;
         }
 
+        /* 6장용 밝은 정보 박스 */
+        .info-box {
+            background-color: #fcfbfa;
+            border: 1px solid #f0eae1;
+            padding: 20px 16px;
+            border-radius: 14px;
+            margin-bottom: 16px;
+        }
+
+        .info-box h3 {
+            color: #e85d04;
+            font-size: 1.05rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .info-box p {
+            font-size: 0.85rem;
+            color: #666666;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .info-box ul {
+            list-style: none;
+        }
+
+        .info-box li {
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+            line-height: 1.5;
+            position: relative;
+            padding-left: 14px;
+            color: #333333;
+        }
+
+        .info-box li:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-box li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #e85d04;
+            font-weight: bold;
+        }
+
         .activity-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -201,6 +263,14 @@
             line-height: 1.4;
         }
 
+        .contact-hint {
+            display: block;
+            margin-top: 6px;
+            font-size: 0.75rem;
+            color: #e85d04;
+            font-weight: 600;
+        }
+
         /* 차트 카드 */
         .chart-card {
             background-color: #fcfbfa;
@@ -225,7 +295,6 @@
             margin-bottom: 12px;
         }
 
-        /* 순수 CSS 원형 도넛 차트 */
         .donut-chart {
             width: 100px;
             height: 100px;
@@ -278,7 +347,7 @@
             line-height: 1.3;
         }
 
-        /* 2장 특화 레이아웃 (세그먼트 탭 버튼) */
+        /* 2장 특화 레이아웃 */
         .tab-menu {
             display: flex;
             background-color: #f0eae1;
@@ -344,7 +413,7 @@
             line-height: 1.4;
         }
 
-        /* 3장 특화 레이아웃 (Tally 폼 모바일 목업) */
+        /* 3장 폼 목업 */
         .form-mockup {
             background-color: #fcfbfa;
             border: 1px solid #e0d8cc;
@@ -391,10 +460,6 @@
             outline: none;
         }
 
-        .form-control::placeholder {
-            color: #b3b3b3;
-        }
-
         .btn-submit {
             width: 100%;
             background-color: #70665c;
@@ -408,7 +473,7 @@
             margin-top: 6px;
         }
 
-        /* 4장 & 5장 공통 아코디언 스타일 */
+        /* 4, 5장 아코디언 */
         .accordion {
             border: 1px solid #f0eae1;
             border-radius: 10px;
@@ -460,25 +525,64 @@
             border-top: 1px solid #fdfbf7;
         }
 
-        /* 하단 푸터 */
+        /* 푸터 스타일 */
         footer {
             background-color: #1a1613;
             color: #ffffff;
             text-align: center;
-            padding: 32px 20px;
+            padding: 40px 20px;
             font-size: 0.85rem;
+        }
+
+        .footer-sponsors {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 24px;
+            font-size: 0.8rem;
+            color: #cccccc;
+        }
+
+        .footer-sponsors span strong {
+            color: #ffffff;
+            margin-right: 4px;
         }
 
         footer p {
             font-weight: 700;
             line-height: 1.4;
-            margin-bottom: 12px;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
         }
 
-        footer small {
-            color: #999999;
-            display: block;
-            font-size: 0.75rem;
+        .footer-contacts {
+            background-color: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 16px;
+            display: inline-block;
+            text-align: left;
+            font-size: 0.85rem;
+            color: #eeeeee;
+        }
+
+        .footer-contacts div {
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-contacts div:last-child {
+            margin-bottom: 0;
+        }
+
+        .footer-contacts strong {
+            color: #f4a261;
+            min-width: 120px;
+            display: inline-block;
         }
     </style>
 </head>
@@ -494,8 +598,14 @@
             <div class="badge">안산형 장애인 지역사회 통합돌봄</div>
             <h1>이웃이 이웃을 잇다,<br><span>틈새돌봄 이웃활동가</span></h1>
             <p>장애 당사자와 따뜻한 관계를 맺고 일상생활을 지원하며 우리 동네를 변화시키는 진정한 이웃활동가 실무 가이드입니다.</p>
+            
+            <!-- 첫 화면 담당자 연락처 노출 -->
+            <div class="hero-contact">
+                📞 사업 담당자(주요한): 070-4612-9513
+            </div>
         </div>
 
+        <!-- 제1장 -->
         <section>
             <div class="section-num">제1장. 이웃활동가 신분 및 지원활동</div>
             <div class="section-desc">양성교육을 이수하고 지역사회 내에서 장애 당사자의 필요에 호응하여 자율적이고 독립적으로 돌봄을 실천합니다.</div>
@@ -535,25 +645,14 @@
                     <div class="activity-info">
                         <h4>동네 모임 참여</h4>
                         <p>지역사회 관계망 형성을 위해 동네 모임, 문화 행사, 복지관 프로그램에 동행합니다.</p>
+                        <!-- 주민모임 담당자 연락처 안내 -->
+                        <span class="contact-hint">※ 주민모임 문의: 김민주 복지사 (070-4612-9558)</span>
                     </div>
                 </div>
-            </div>
-
-            <div class="chart-card">
-                <h4>주요 활동 지원 비중 (예시)</h4>
-                <div class="chart-container">
-                    <div class="donut-chart"></div>
-                    <div class="chart-labels">
-                        <div class="label-item"><span class="label-dot" style="background-color:#e85d04;"></span>일상생활 (40%)</div>
-                        <div class="label-item"><span class="label-dot" style="background-color:#3a86ff;"></span>외출 동행 (30%)</div>
-                        <div class="label-item"><span class="label-dot" style="background-color:#38b000;"></span>말벗/안부 (20%)</div>
-                        <div class="label-item"><span class="label-dot" style="background-color:#9d4edd;"></span>동네 모임 (10%)</div>
-                    </div>
-                </div>
-                <div class="chart-caption">※ 실제 활동 비율은 당사자의 개인별 필요와 현장 상황에 따라 유연하게 달라집니다.</div>
             </div>
         </section>
 
+        <!-- 제2장 -->
         <section>
             <div class="section-num">제2장. 소통방 참여 및 활동 신청</div>
             <div class="section-desc">돌봄 매칭 요청은 카카오톡 오픈채팅방을 통해 공지됩니다. 매칭방 입장 및 신청 수칙을 확인하세요.</div>
@@ -569,19 +668,19 @@
                 <p><strong>전달받은 링크로 입장하세요</strong></p>
                 <p style="font-size: 0.85rem; color:#666; margin-top:6px;">복지관에서 개별 전달해 드린 링크 또는 QR코드를 통해 '틈새돌봄 이웃활동가 연결소'에 입장합니다.</p>
                 <div class="code-badge">🔑 참여코드 : 0630</div>
-                <div class="notice-box">
-                    💡 <strong>필독안내:</strong> 실명이나 일반 개인 카카오톡 프로필로 그냥 입장하시는 경우 활동 식별 및 관리가 어려우므로 반드시 다음의 프로필 설정 규칙을 따라주세요.
-                </div>
             </div>
 
             <div id="tab-1" class="tab-content">
                 <div style="font-size: 1.5rem; margin-bottom: 8px;">👤</div>
-                <p><strong>반드시 카카오톡 오픈프로필 생성</strong></p>
-                <p style="font-size: 0.85rem; color:#666; margin-top:6px;">실명 기반의 매칭 관리를 위해 오픈채팅방 입장 시 프로필명을 아래 규칙으로 변경해야 합니다.</p>
-                <div class="code-badge">✏️ [실명 / 지역]</div>
-                <p style="font-size: 0.8rem; color:#e85d04; font-weight:700;">예시: 홍길동 / 상록구</p>
-                <div class="notice-box">
-                    개인 프라이버시 보호를 위해 실제 얼굴 사진 대신 단정한 캐릭터나 배경 이미지를 프로필 사진으로 등록하시는 것을 권장합니다.
+                <p><strong>카카오프렌즈 프로필로 설정</strong></p>
+                <p style="font-size: 0.85rem; color:#666; margin-top:6px;">오픈채팅방 입장 시 <strong>'카카오프렌즈'</strong>를 선택한 후, 닉네임을 아래 규칙으로 입력해 주세요. (실명 제외)</p>
+                
+                <div class="code-badge">✏️ 안산 + 활동번호</div>
+                <p style="font-size: 0.8rem; color:#e85d04; font-weight:700;">예시: 안산1, 안산2</p>
+                
+                <div class="notice-box" style="background-color: #fff3e0; border-color: #ffe0b2; color: #e65100;">
+                    💡 <strong>활동 번호 확인 방법:</strong> 발급받으신 <strong>'위촉장' 왼쪽 상단</strong>의 문서 번호 끝자리가 활동가님의 고유 활동 번호입니다.<br>
+                    <span style="display:inline-block; margin-top:4px; font-weight: bold;">(예: 제2604-66-3호 라고 적혀 있다면 ➜ 안산3)</span>
                 </div>
             </div>
 
@@ -590,9 +689,6 @@
                 <p><strong>공지 확인 후 "댓글 매칭"</strong></p>
                 <p style="font-size: 0.85rem; color:#666; margin-top:6px;">방에 당사자의 일시, 장소, 요청 내용이 담긴 돌봄 지원 요청서가 실시간 공지됩니다.</p>
                 <div class="code-badge">💬 "동행 가능합니다"</div>
-                <div class="notice-box">
-                    지원이 가능한 활동가님은 공지글에 신속히 수락 댓글을 남겨주시면 복지관 담당자가 확인 후 개별 연락 및 최종 매칭을 확정합니다.
-                </div>
             </div>
         </section>
 
@@ -768,6 +864,93 @@
         }
 
         // Tally 일지 폼 제출 시뮬레이션
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            alert('활동일지가 정상적으로 접수되었습니다. 우리 동네를 위한 따뜻한 동행에 감사드립니다!');
+            document.getElementById('tallyForm').reset();
+            <section>
+            <div class="section-num">제6장. 활동비 지급 및 안심 보험 안내</div>
+            <div class="section-desc">활동에 수반되는 실비 보전과 안전을 위한 안내입니다.</div>
+
+            <div class="info-box">
+                <h3>💰 1. 활동비 지급 기준 및 단가</h3>
+                <ul>
+                    <li><strong>주간 평일 (09:00 ~ 18:00):</strong> 1시간 당 <strong>10,000원</strong></li>
+                    <li><strong>야간 및 휴일:</strong> 1시간 당 <strong>15,000원</strong></li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>⏳ 2. 지급 상한 및 자원봉사 시간 인정</h3>
+                <ul>
+                    <li><strong>1일 1당사자 최대 2시간:</strong> 2시간까지만 활동비가 지급됩니다.</li>
+                    <li><strong>자원봉사 시간 전환:</strong> 2시간 초과 시 '자원봉사 시간'으로 대체 등록됩니다.</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>🧾 4. 세금 공제 (원천징수) 안내</h3>
+                <ul>
+                    <li><strong>8.8% 공제 기준:</strong> 월별 총 지급액이 <strong>125,000원을 초과</strong>할 경우, 총액의 8.8% 세금 원천징수 후 입금됩니다. (지급액의 60% 필요경비 인정)</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>🛡️ 5. 활동가 안심 보험 지원</h3>
+                <ul>
+                    <li>모든 활동가님은 '상해보험 및 배상책임보험'에 가입되어 있습니다. 사고 발생 시 즉시 <strong>담당자(주요한 070-4612-9513)</strong>에게 보고해 주셔야 보험 처리가 가능합니다.</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-sponsors">
+            <span><strong>지원</strong> 경기복지재단</span> |
+            <span><strong>주최</strong> 안산시</span> |
+            <span><strong>주관</strong> 안산시장애인복지관</span>
+        </div>
+
+        <p>우리 동네 따뜻한 연결고리가 되어주시는<br>이웃활동가님, 진심으로 감사합니다!</p>
+
+        <div class="footer-contacts">
+            <div>
+                <strong>[통합돌봄 사업 담당]</strong> 주요한 사회복지사 (070-4612-9513)
+            </div>
+            <div>
+                <strong>[활동가 양성교육 담당]</strong> 라윤정 사회복지사 (070-4612-9537)
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function switchTab(index) {
+            const tabs = document.querySelectorAll('.tab-btn');
+            const contents = document.querySelectorAll('.tab-content');
+            
+            tabs.forEach((tab, i) => {
+                if(i === index) {
+                    tab.classList.add('active');
+                    contents[i].classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                    contents[i].classList.remove('active');
+                }
+            });
+        }
+
+        function toggleAccordion(header) {
+            const body = header.nextElementSibling;
+            header.classList.toggle('active');
+            
+            if (header.classList.contains('active')) {
+                body.style.maxHeight = body.scrollHeight + "px";
+            } else {
+                body.style.maxHeight = "0";
+            }
+        }
+
         function handleFormSubmit(event) {
             event.preventDefault();
             alert('활동일지가 정상적으로 접수되었습니다. 우리 동네를 위한 따뜻한 동행에 감사드립니다!');
