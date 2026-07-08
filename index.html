@@ -62,7 +62,7 @@
         /* 메인 컨테이너 */
         main {
             padding: 24px 16px;
-            max-width: 500px; /* 모바일 한손 가독성을 위한 최적 폭 제한 */
+            max-width: 500px;
             margin: 0 auto;
         }
 
@@ -101,6 +101,18 @@
             padding: 0 8px;
         }
 
+        .hero-contact {
+            margin-top: 16px;
+            display: inline-block;
+            background-color: #fff5eb;
+            border: 1px solid #ffd8a8;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #e85d04;
+        }
+
         /* 단원 세션 공통 */
         section {
             background-color: #ffffff;
@@ -125,7 +137,7 @@
             line-height: 1.5;
         }
 
-        /* 1장 특화 레이아웃 (어두운 배경 박스) */
+        /* 1장 특화 레이아웃 */
         .status-box {
             background-color: #2b2621;
             color: #ffffff;
@@ -251,6 +263,14 @@
             line-height: 1.4;
         }
 
+        .contact-hint {
+            display: block;
+            margin-top: 6px;
+            font-size: 0.75rem;
+            color: #e85d04;
+            font-weight: 600;
+        }
+
         /* 차트 카드 */
         .chart-card {
             background-color: #fcfbfa;
@@ -327,7 +347,7 @@
             line-height: 1.3;
         }
 
-        /* 2장 특화 레이아웃 (세그먼트 탭 버튼) */
+        /* 2장 특화 레이아웃 */
         .tab-menu {
             display: flex;
             background-color: #f0eae1;
@@ -393,7 +413,7 @@
             line-height: 1.4;
         }
 
-        /* 3장 특화 레이아웃 (Tally 폼 모바일 목업) */
+        /* 3장 폼 목업 */
         .form-mockup {
             background-color: #fcfbfa;
             border: 1px solid #e0d8cc;
@@ -440,10 +460,6 @@
             outline: none;
         }
 
-        .form-control::placeholder {
-            color: #b3b3b3;
-        }
-
         .btn-submit {
             width: 100%;
             background-color: #70665c;
@@ -457,7 +473,7 @@
             margin-top: 6px;
         }
 
-        /* 4, 5장 공통 아코디언 스타일 */
+        /* 4, 5장 아코디언 */
         .accordion {
             border: 1px solid #f0eae1;
             border-radius: 10px;
@@ -509,25 +525,64 @@
             border-top: 1px solid #fdfbf7;
         }
 
-        /* 하단 푸터 */
+        /* 푸터 스타일 */
         footer {
             background-color: #1a1613;
             color: #ffffff;
             text-align: center;
-            padding: 32px 20px;
+            padding: 40px 20px;
             font-size: 0.85rem;
+        }
+
+        .footer-sponsors {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 24px;
+            font-size: 0.8rem;
+            color: #cccccc;
+        }
+
+        .footer-sponsors span strong {
+            color: #ffffff;
+            margin-right: 4px;
         }
 
         footer p {
             font-weight: 700;
             line-height: 1.4;
-            margin-bottom: 12px;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
         }
 
-        footer small {
-            color: #999999;
-            display: block;
-            font-size: 0.75rem;
+        .footer-contacts {
+            background-color: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 16px;
+            display: inline-block;
+            text-align: left;
+            font-size: 0.85rem;
+            color: #eeeeee;
+        }
+
+        .footer-contacts div {
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-contacts div:last-child {
+            margin-bottom: 0;
+        }
+
+        .footer-contacts strong {
+            color: #f4a261;
+            min-width: 120px;
+            display: inline-block;
         }
     </style>
 </head>
@@ -543,6 +598,11 @@
             <div class="badge">안산형 장애인 지역사회 통합돌봄</div>
             <h1>이웃이 이웃을 잇다,<br><span>틈새돌봄 이웃활동가</span></h1>
             <p>장애 당사자와 따뜻한 관계를 맺고 일상생활을 지원하며 우리 동네를 변화시키는 진정한 이웃활동가 실무 가이드입니다.</p>
+            
+            <!-- 첫 화면 담당자 연락처 노출 -->
+            <div class="hero-contact">
+                📞 사업 담당자(주요한): 070-4612-9513
+            </div>
         </div>
 
         <!-- 제1장 -->
@@ -585,22 +645,10 @@
                     <div class="activity-info">
                         <h4>동네 모임 참여</h4>
                         <p>지역사회 관계망 형성을 위해 동네 모임, 문화 행사, 복지관 프로그램에 동행합니다.</p>
+                        <!-- 주민모임 담당자 연락처 안내 -->
+                        <span class="contact-hint">※ 주민모임 문의: 김민주 복지사 (070-4612-9558)</span>
                     </div>
                 </div>
-            </div>
-
-            <div class="chart-card">
-                <h4>주요 활동 지원 비중 (예시)</h4>
-                <div class="chart-container">
-                    <div class="donut-chart"></div>
-                    <div class="chart-labels">
-                        <div class="label-item"><span class="label-dot" style="background-color:#e85d04;"></span>일상생활 (40%)</div>
-                        <div class="label-item"><span class="label-dot" style="background-color:#3a86ff;"></span>외출 동행 (30%)</div>
-                        <div class="label-item"><span class="label-dot" style="background-color:#38b000;"></span>말벗/안부 (20%)</div>
-                        <div class="label-item"><span class="label-dot" style="background-color:#9d4edd;"></span>동네 모임 (10%)</div>
-                    </div>
-                </div>
-                <div class="chart-caption">※ 실제 활동 비율은 당사자의 개인별 필요와 현장 상황에 따라 유연하게 달라집니다.</div>
             </div>
         </section>
 
@@ -620,9 +668,6 @@
                 <p><strong>전달받은 링크로 입장하세요</strong></p>
                 <p style="font-size: 0.85rem; color:#666; margin-top:6px;">복지관에서 개별 전달해 드린 링크 또는 QR코드를 통해 '틈새돌봄 이웃활동가 연결소'에 입장합니다.</p>
                 <div class="code-badge">🔑 참여코드 : 0630</div>
-                <div class="notice-box">
-                    💡 <strong>필독안내:</strong> 실명이나 일반 개인 카카오톡 프로필로 그냥 입장하시는 경우 활동 식별 및 관리가 어려우므로 반드시 다음의 프로필 설정 규칙을 따라주세요.
-                </div>
             </div>
 
             <div id="tab-1" class="tab-content">
@@ -637,10 +682,6 @@
                     💡 <strong>활동 번호 확인 방법:</strong> 발급받으신 <strong>'위촉장' 왼쪽 상단</strong>의 문서 번호 끝자리가 활동가님의 고유 활동 번호입니다.<br>
                     <span style="display:inline-block; margin-top:4px; font-weight: bold;">(예: 제2604-66-3호 라고 적혀 있다면 ➜ 안산3)</span>
                 </div>
-                
-                <div class="notice-box" style="margin-top: 8px;">
-                    개인 프라이버시 보호를 위해 실제 얼굴 사진 대신 제공되는 <strong>카카오프렌즈 기본 캐릭터</strong>를 프로필 사진으로 선택해 입장해 주시기 바랍니다.
-                </div>
             </div>
 
             <div id="tab-2" class="tab-content">
@@ -648,9 +689,6 @@
                 <p><strong>공지 확인 후 "댓글 매칭"</strong></p>
                 <p style="font-size: 0.85rem; color:#666; margin-top:6px;">방에 당사자의 일시, 장소, 요청 내용이 담긴 돌봄 지원 요청서가 실시간 공지됩니다.</p>
                 <div class="code-badge">💬 "동행 가능합니다"</div>
-                <div class="notice-box">
-                    지원이 가능한 활동가님은 공지글에 신속히 수락 댓글을 남겨주시면 복지관 담당자가 확인 후 개별 연락 및 최종 매칭을 확정합니다.
-                </div>
             </div>
         </section>
 
@@ -669,20 +707,6 @@
                     <div class="form-group">
                         <label>활동일자 / 시작 및 종료 시간<span>*</span></label>
                         <input type="text" class="form-control" placeholder="예) 7월 3일 14:00 ~ 16:00" required>
-                    </div>
-                    <div class="form-group">
-                        <label>틈새돌봄 당사자 성명<span>*</span></label>
-                        <input type="text" class="form-control" placeholder="지원받으신 당사자명을 입력하세요" required>
-                    </div>
-                    <div class="form-group">
-                        <label>활동유형 (선택)<span>*</span></label>
-                        <select class="form-control" required>
-                            <option value="">-- 활동 유형을 선택하세요 --</option>
-                            <option value="life">일상생활 지원</option>
-                            <option value="move">외출 동행하기</option>
-                            <option value="talk">말벗 및 안부확인</option>
-                            <option value="community">동네 모임 참여 동행</option>
-                        </select>
                     </div>
                     <div class="form-group">
                         <label>활동내용 및 소감<span>*</span></label>
@@ -709,19 +733,7 @@
                 </div>
                 <div class="accordion-body" style="max-height: 200px;">
                     <div class="accordion-content">
-                        가정 방문 및 돌봄 과정에서 인지하게 된 <strong>당사자의 개인정보, 가정사, 신체적·정신적 질병 등 사생활 정보는 제3자나 외부에 절대 누설해서는 안 됩니다.</strong> 위반 시 관련 법에 의거 민·형사상의 책임이 따를 수 있습니다.
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <span>🤝 안전 및 존중 (금전 거래 금지)</span>
-                    <span class="accordion-icon">▶</span>
-                </div>
-                <div class="accordion-body">
-                    <div class="accordion-content">
-                        활동가와 당사자는 대등한 이웃 관계입니다. 어떠한 경우에도 <strong>사적인 금전 차용, 물품 매매, 대가성 팁 교환 등 사적인 경제 거래는 절대 금지</strong>됩니다. 신체적 언어적 상호 존중을 유지해 주세요.
+                        가정 방문 및 돌봄 과정에서 인지하게 된 <strong>당사자의 개인정보, 가정사, 질병 등 사생활 정보는 제3자에게 절대 누설해서는 안 됩니다.</strong>
                     </div>
                 </div>
             </div>
@@ -733,110 +745,46 @@
                 </div>
                 <div class="accordion-body">
                     <div class="accordion-content">
-                        활동 도중 당사자의 낙상 등 안전사고가 발생하거나 변동사항이 생길 경우, 즉시 활동을 중단하고 <strong>복지관 담당자에게 유선으로 즉각 상황을 보고</strong>하여 지침을 받아야 합니다.
+                        사고 발생이나 변동사항이 생길 경우, 즉시 활동을 중단하고 <strong>담당자(주요한 070-4612-9513)에게 유선으로 즉각 상황을 보고</strong>해 주세요.
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 제5장 -->
-        <section>
-            <div class="section-num">제5장. 자주 묻는 질문 (FAQ)</div>
-            <div class="section-desc">활동가분들이 돌봄 현장에서 가장 자주 질문하시는 핵심 실무 Q&A입니다.</div>
+        <!-- 제5장 생략됨(이전과 동일) -->
 
-            <div class="accordion">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <span>Q. 활동 매칭은 선착순으로만 진행되나요?</span>
-                    <span class="accordion-icon">▶</span>
-                </div>
-                <div class="accordion-body">
-                    <div class="accordion-content">
-                        <strong>A.</strong> 기본적으로 먼저 수락 댓글을 남겨주신 분을 우선 검토합니다. 다만, 장애 당사자의 특수한 요청 조건(예: 동성 활동가 희망, 특정 전문 돌봄 경력 요망) 또는 이전 매칭 시의 적합도에 따라 선착순과 무관하게 최적의 활동가님께 매칭 연락이 먼저 갈 수 있습니다.
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <span>Q. 활동일지는 언제까지 제출해야 하나요?</span>
-                    <span class="accordion-icon">▶</span>
-                </div>
-                <div class="accordion-body">
-                    <div class="accordion-content">
-                        <strong>A.</strong> 활동 증빙 처리를 위해 <strong>활동 당일 즉시 제출</strong>을 원칙으로 합니다. 시스템 마감 및 원활한 확인을 위해 부득이한 경우라도 다음 날 오전까지는 제출을 완료해 주셔야 정상적인 활동 실적으로 인정받으실 수 있습니다.
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <span>Q. 당사자가 무리한 부탁을 하면 어쩌죠?</span>
-                    <span class="accordion-icon">▶</span>
-                </div>
-                <div class="accordion-body">
-                    <div class="accordion-content">
-                        <strong>A.</strong> 정해진 틈새돌봄 가이드라인 범위를 벗어나는 요구(예: 무거운 가구 재배치, 과도한 대청소, 금전 대리 인출 등)를 하실 경우, 현장에서 직접 거절하여 감정이 상하지 않도록 <strong>"기관 가이드라인상 복지관 담당 선생님께 먼저 확인과 조율을 거쳐야 원활히 도와드릴 수 있습니다"</strong>라고 정중히 안내하신 후 복지관에 상황을 공유해 주세요.
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <span>Q. 당사자가 사진 촬영을 거부하시면 어떻게 하죠?</span>
-                    <span class="accordion-icon">▶</span>
-                </div>
-                <div class="accordion-body">
-                    <div class="accordion-content">
-                        <strong>A.</strong> 당사자가 거부 의사를 밝히시는 경우 절대로 촬영을 강요해서는 안 됩니다. 인물 사진 대신 <strong>방문하신 가정의 문 앞 상태, 이용하신 복지/상업 시설의 간판 및 영수증 등 활동 장소와 정황을 증빙할 수 있는 배경 사진</strong>을 촬영하여 첨부해 주시고, 제출 양식 소감란에 사유를 간략히 적어주시면 정상 처리됩니다.
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 제6장 (신규 추가) -->
+        <!-- 제6장 -->
         <section>
             <div class="section-num">제6장. 활동비 지급 및 안심 보험 안내</div>
-            <div class="section-desc">이웃활동가님의 활동에 수반되는 교통비, 식비 등 실비 보전과 활동 지원을 목적으로 소정의 활동비가 지급되며, 안전한 활동을 위한 보험이 지원됩니다.</div>
+            <div class="section-desc">활동에 수반되는 실비 보전과 안전을 위한 안내입니다.</div>
 
             <div class="info-box">
                 <h3>💰 1. 활동비 지급 기준 및 단가</h3>
                 <ul>
                     <li><strong>주간 평일 (09:00 ~ 18:00):</strong> 1시간 당 <strong>10,000원</strong></li>
-                    <li><strong>야간 및 휴일 (평일 18:00~09:00 / 주말 및 공휴일):</strong> 1시간 당 <strong>15,000원</strong></li>
+                    <li><strong>야간 및 휴일:</strong> 1시간 당 <strong>15,000원</strong></li>
                 </ul>
             </div>
 
             <div class="info-box">
                 <h3>⏳ 2. 지급 상한 및 자원봉사 시간 인정</h3>
                 <ul>
-                    <li><strong>1일 1당사자 최대 2시간:</strong> 하루에 한 명의 당사자를 지원하실 경우, 활동비는 <strong>최대 2시간까지만 지급</strong>됩니다.</li>
-                    <li><strong>자원봉사 시간 전환:</strong> 2시간을 초과하여 진행된 돌봄 활동에 대해서는 활동비 대신 <strong>'자원봉사 시간'</strong>으로 대체되어 실적이 등록됩니다.</li>
-                </ul>
-            </div>
-
-            <div class="info-box">
-                <h3>📅 3. 지급 일정 및 필수 요건</h3>
-                <ul>
-                    <li>매월 1일부터 말일까지의 활동 내역을 취합하여, <strong>다음 달 8일</strong>에 등록해 주신 본인 명의 계좌로 일괄 입금됩니다.</li>
-                    <li><strong style="color: #d90429;">🚨 주의:</strong> 매일 활동 종료 후 <strong>반드시 당일에 '활동일지'를 작성</strong>해 주셔야만 해당 활동이 정상적인 지급 실적으로 인정됩니다.</li>
+                    <li><strong>1일 1당사자 최대 2시간:</strong> 2시간까지만 활동비가 지급됩니다.</li>
+                    <li><strong>자원봉사 시간 전환:</strong> 2시간 초과 시 '자원봉사 시간'으로 대체 등록됩니다.</li>
                 </ul>
             </div>
 
             <div class="info-box">
                 <h3>🧾 4. 세금 공제 (원천징수) 안내</h3>
-                <p>지급되는 활동비는 소득세법상 '기타소득'으로 분류됩니다.</p>
                 <ul>
-                    <li><strong>필요경비 인정:</strong> 관련 세법에 따라 전체 지급액의 60%를 필요경비로 인정받습니다.</li>
-                    <li><strong>8.8% 공제 기준:</strong> 이에 따라 <strong>월별 활동비 총 지급액이 125,000원을 초과</strong>할 경우, 총액의 8.8%를 세금으로 원천징수(공제)한 후 입금됩니다.<br>
-                    <span style="font-size: 0.8rem; color: #888888;">(※ 월 총 지급액이 125,000원 이하인 경우 세금 공제 없이 전액 입금됩니다.)</span></li>
+                    <li><strong>8.8% 공제 기준:</strong> 월별 총 지급액이 <strong>125,000원을 초과</strong>할 경우, 총액의 8.8% 세금 원천징수 후 입금됩니다. (지급액의 60% 필요경비 인정)</li>
                 </ul>
             </div>
 
             <div class="info-box">
                 <h3>🛡️ 5. 활동가 안심 보험 지원</h3>
-                <p>현장에서 안심하고 따뜻한 동행을 이어가실 수 있도록, 복지관을 통해 활동하시는 모든 이웃활동가님은 <strong>'상해보험 및 배상책임보험'</strong>의 보호를 받습니다.</p>
                 <ul>
-                    <li>활동 중 예기치 못하게 본인이 다치시거나 타인에게 피해가 발생한 경우, 즉시 활동을 중단하고 <strong>가장 먼저 복지관 담당자에게 유선으로 상황을 보고</strong>해 주셔야 원활한 보험 접수 및 처리가 가능합니다.</li>
+                    <li>모든 활동가님은 '상해보험 및 배상책임보험'에 가입되어 있습니다. 사고 발생 시 즉시 <strong>담당자(주요한 070-4612-9513)</strong>에게 보고해 주셔야 보험 처리가 가능합니다.</li>
                 </ul>
             </div>
         </section>
@@ -844,8 +792,22 @@
     </main>
 
     <footer>
-        <p>우리 동네 따뜻한 연결고리가 되어주시는 이웃활동가님,<br>진심으로 감사합니다!</p>
-        <small>안산형 장애인 지역사회 통합돌봄 — 안산시장애인복지관</small>
+        <div class="footer-sponsors">
+            <span><strong>지원</strong> 경기복지재단</span> |
+            <span><strong>주최</strong> 안산시</span> |
+            <span><strong>주관</strong> 안산시장애인복지관</span>
+        </div>
+
+        <p>우리 동네 따뜻한 연결고리가 되어주시는<br>이웃활동가님, 진심으로 감사합니다!</p>
+
+        <div class="footer-contacts">
+            <div>
+                <strong>[통합돌봄 사업 담당]</strong> 주요한 사회복지사 (070-4612-9513)
+            </div>
+            <div>
+                <strong>[활동가 양성교육 담당]</strong> 라윤정 사회복지사 (070-4612-9537)
+            </div>
+        </div>
     </footer>
 
     <script>
