@@ -62,7 +62,7 @@
         /* 메인 컨테이너 */
         main {
             padding: 24px 16px;
-            max-width: 500px;
+            max-width: 500px; /* 모바일 한손 가독성을 위한 최적 폭 제한 */
             margin: 0 auto;
         }
 
@@ -125,7 +125,7 @@
             line-height: 1.5;
         }
 
-        /* 1장 특화 레이아웃 */
+        /* 1장 특화 레이아웃 (어두운 배경 박스) */
         .status-box {
             background-color: #2b2621;
             color: #ffffff;
@@ -164,6 +164,56 @@
             position: absolute;
             left: 0;
             color: #ff9e00;
+            font-weight: bold;
+        }
+
+        /* 6장용 밝은 정보 박스 */
+        .info-box {
+            background-color: #fcfbfa;
+            border: 1px solid #f0eae1;
+            padding: 20px 16px;
+            border-radius: 14px;
+            margin-bottom: 16px;
+        }
+
+        .info-box h3 {
+            color: #e85d04;
+            font-size: 1.05rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .info-box p {
+            font-size: 0.85rem;
+            color: #666666;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .info-box ul {
+            list-style: none;
+        }
+
+        .info-box li {
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+            line-height: 1.5;
+            position: relative;
+            padding-left: 14px;
+            color: #333333;
+        }
+
+        .info-box li:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-box li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #e85d04;
             font-weight: bold;
         }
 
@@ -407,7 +457,7 @@
             margin-top: 6px;
         }
 
-        /* 4장 & 5장 공통 아코디언 스타일 */
+        /* 4, 5장 공통 아코디언 스타일 */
         .accordion {
             border: 1px solid #f0eae1;
             border-radius: 10px;
@@ -495,6 +545,7 @@
             <p>장애 당사자와 따뜻한 관계를 맺고 일상생활을 지원하며 우리 동네를 변화시키는 진정한 이웃활동가 실무 가이드입니다.</p>
         </div>
 
+        <!-- 제1장 -->
         <section>
             <div class="section-num">제1장. 이웃활동가 신분 및 지원활동</div>
             <div class="section-desc">양성교육을 이수하고 지역사회 내에서 장애 당사자의 필요에 호응하여 자율적이고 독립적으로 돌봄을 실천합니다.</div>
@@ -553,6 +604,7 @@
             </div>
         </section>
 
+        <!-- 제2장 -->
         <section>
             <div class="section-num">제2장. 소통방 참여 및 활동 신청</div>
             <div class="section-desc">돌봄 매칭 요청은 카카오톡 오픈채팅방을 통해 공지됩니다. 매칭방 입장 및 신청 수칙을 확인하세요.</div>
@@ -573,7 +625,6 @@
                 </div>
             </div>
 
-            <!-- ★ 완벽하게 수정된 내용 ★ -->
             <div id="tab-1" class="tab-content">
                 <div style="font-size: 1.5rem; margin-bottom: 8px;">👤</div>
                 <p><strong>카카오프렌즈 프로필로 설정</strong></p>
@@ -603,6 +654,7 @@
             </div>
         </section>
 
+        <!-- 제3장 -->
         <section id="form-section">
             <div class="section-num">제3장. 활동일지(Tally) 작성 가이드</div>
             <div class="section-desc">활동 증빙 및 정산을 위해 활동 종료 후 <strong>당일 즉시</strong> 양식을 작성하여 제출해 주셔야 합니다.</div>
@@ -645,6 +697,7 @@
             </div>
         </section>
 
+        <!-- 제4장 -->
         <section>
             <div class="section-num">제4장. 꼭 지켜주세요! 필수 수칙</div>
             <div class="section-desc">상호 존중과 깊은 신뢰를 바탕으로 안전하게 운영됩니다. 아래 수칙을 준수해 주세요.</div>
@@ -686,6 +739,7 @@
             </div>
         </section>
 
+        <!-- 제5장 -->
         <section>
             <div class="section-num">제5장. 자주 묻는 질문 (FAQ)</div>
             <div class="section-desc">활동가분들이 돌봄 현장에서 가장 자주 질문하시는 핵심 실무 Q&A입니다.</div>
@@ -733,11 +787,60 @@
                 </div>
                 <div class="accordion-body">
                     <div class="accordion-content">
-                        <strong>A.</strong> 당사자가 거부 의사를 밝히시는 경우 절대로 촬영을 강요해서는 안 됩니다. 인물 사진 대신 **방문하신 가정의 문 앞 상태, 이용하신 복지/상업 시설의 간판 및 영수증 등 활동 장소와 정황을 증빙할 수 있는 배경 사진**을 촬영하여 첨부해 주시고, 제출 양식 소감란에 사유를 간략히 적어주시면 정상 처리됩니다.
+                        <strong>A.</strong> 당사자가 거부 의사를 밝히시는 경우 절대로 촬영을 강요해서는 안 됩니다. 인물 사진 대신 <strong>방문하신 가정의 문 앞 상태, 이용하신 복지/상업 시설의 간판 및 영수증 등 활동 장소와 정황을 증빙할 수 있는 배경 사진</strong>을 촬영하여 첨부해 주시고, 제출 양식 소감란에 사유를 간략히 적어주시면 정상 처리됩니다.
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- 제6장 (신규 추가) -->
+        <section>
+            <div class="section-num">제6장. 활동비 지급 및 안심 보험 안내</div>
+            <div class="section-desc">이웃활동가님의 활동에 수반되는 교통비, 식비 등 실비 보전과 활동 지원을 목적으로 소정의 활동비가 지급되며, 안전한 활동을 위한 보험이 지원됩니다.</div>
+
+            <div class="info-box">
+                <h3>💰 1. 활동비 지급 기준 및 단가</h3>
+                <ul>
+                    <li><strong>주간 평일 (09:00 ~ 18:00):</strong> 1시간 당 <strong>10,000원</strong></li>
+                    <li><strong>야간 및 휴일 (평일 18:00~09:00 / 주말 및 공휴일):</strong> 1시간 당 <strong>15,000원</strong></li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>⏳ 2. 지급 상한 및 자원봉사 시간 인정</h3>
+                <ul>
+                    <li><strong>1일 1당사자 최대 2시간:</strong> 하루에 한 명의 당사자를 지원하실 경우, 활동비는 <strong>최대 2시간까지만 지급</strong>됩니다.</li>
+                    <li><strong>자원봉사 시간 전환:</strong> 2시간을 초과하여 진행된 돌봄 활동에 대해서는 활동비 대신 <strong>'자원봉사 시간'</strong>으로 대체되어 실적이 등록됩니다.</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>📅 3. 지급 일정 및 필수 요건</h3>
+                <ul>
+                    <li>매월 1일부터 말일까지의 활동 내역을 취합하여, <strong>다음 달 8일</strong>에 등록해 주신 본인 명의 계좌로 일괄 입금됩니다.</li>
+                    <li><strong style="color: #d90429;">🚨 주의:</strong> 매일 활동 종료 후 <strong>반드시 당일에 '활동일지'를 작성</strong>해 주셔야만 해당 활동이 정상적인 지급 실적으로 인정됩니다.</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>🧾 4. 세금 공제 (원천징수) 안내</h3>
+                <p>지급되는 활동비는 소득세법상 '기타소득'으로 분류됩니다.</p>
+                <ul>
+                    <li><strong>필요경비 인정:</strong> 관련 세법에 따라 전체 지급액의 60%를 필요경비로 인정받습니다.</li>
+                    <li><strong>8.8% 공제 기준:</strong> 이에 따라 <strong>월별 활동비 총 지급액이 125,000원을 초과</strong>할 경우, 총액의 8.8%를 세금으로 원천징수(공제)한 후 입금됩니다.<br>
+                    <span style="font-size: 0.8rem; color: #888888;">(※ 월 총 지급액이 125,000원 이하인 경우 세금 공제 없이 전액 입금됩니다.)</span></li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>🛡️ 5. 활동가 안심 보험 지원</h3>
+                <p>현장에서 안심하고 따뜻한 동행을 이어가실 수 있도록, 복지관을 통해 활동하시는 모든 이웃활동가님은 <strong>'상해보험 및 배상책임보험'</strong>의 보호를 받습니다.</p>
+                <ul>
+                    <li>활동 중 예기치 못하게 본인이 다치시거나 타인에게 피해가 발생한 경우, 즉시 활동을 중단하고 <strong>가장 먼저 복지관 담당자에게 유선으로 상황을 보고</strong>해 주셔야 원활한 보험 접수 및 처리가 가능합니다.</li>
+                </ul>
+            </div>
+        </section>
+
     </main>
 
     <footer>
