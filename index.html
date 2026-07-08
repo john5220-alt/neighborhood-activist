@@ -698,27 +698,75 @@
             <div class="section-desc">활동 증빙 및 정산을 위해 활동 종료 후 <strong>당일 즉시</strong> 양식을 작성하여 제출해 주셔야 합니다.</div>
             
             <div class="form-mockup">
-                <div class="form-title-bar">📋 이웃활동가 활동일지 입력 양식</div>
-                <form id="tallyForm" onsubmit="handleFormSubmit(event)">
-                    <div class="form-group">
-                        <label>활동가 성명<span>*</span></label>
-                        <input type="text" class="form-control" placeholder="성명을 입력하세요" required>
-                    </div>
-                    <div class="form-group">
-                        <label>활동일자 / 시작 및 종료 시간<span>*</span></label>
-                        <input type="text" class="form-control" placeholder="예) 7월 3일 14:00 ~ 16:00" required>
-                    </div>
-                    <div class="form-group">
-                        <label>활동내용 및 소감<span>*</span></label>
-                        <textarea class="form-control" rows="3" placeholder="오늘 진행한 활동 내용과 간단한 소감을 기록해주세요" style="resize:none;" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label>활동사진 첨부<span>*</span></label>
-                        <input type="file" class="form-control" accept="image/*" required>
-                    </div>
-                    <button type="submit" class="btn-submit">제출하기 →</button>
-                </form>
+    <div class="form-title-bar">📋 이웃활동가 활동일지 입력 양식</div>
+    <form id="tallyForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+            <label>활동가 성명<span>*</span></label>
+            <input type="text" class="form-control" placeholder="성명을 입력하세요" required>
+        </div>
+
+        <div class="form-group">
+            <label>활동일자<span>*</span></label>
+            <input type="date" class="form-control" required>
+        </div>
+
+        <div class="form-group" style="display: flex; gap: 10px;">
+            <div style="flex: 1;">
+                <label>시작 시간<span>*</span></label>
+                <div style="display: flex; gap: 5px;">
+                    <select class="form-control" required><option value="">시</option>
+                        <script>for(let i=0; i<24; i++) document.write(`<option value="${i}">${i}시</option>`);</script>
+                    </select>
+                    <select class="form-control" required><option value="">분</option>
+                        <option value="00">00분</option><option value="30">30분</option>
+                    </select>
+                </div>
             </div>
+            <div style="flex: 1;">
+                <label>종료 시간<span>*</span></label>
+                <div style="display: flex; gap: 5px;">
+                    <select class="form-control" required><option value="">시</option>
+                        <script>for(let i=0; i<24; i++) document.write(`<option value="${i}">${i}시</option>`);</script>
+                    </select>
+                    <select class="form-control" required><option value="">분</option>
+                        <option value="00">00분</option><option value="30">30분</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>틈새돌봄 당사자 성명<span>*</span></label>
+            <input type="text" class="form-control" placeholder="지원받으신 당사자명을 입력하세요" required>
+        </div>
+
+        <div class="form-group">
+            <label>활동유형<span>*</span></label>
+            <select class="form-control" required>
+                <option value="">-- 활동 유형을 선택하세요 --</option>
+                <option value="life">일상생활 함께하기 (가정 내 돌봄)</option>
+                <option value="move">외출 동행하기 (이동지원)</option>
+                <option value="talk">말벗 및 안부 묻기 (정서지원)</option>
+                <option value="community">동네 모임 함께 참여하기 (지역사회 관계망 형성)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>활동내용 및 소감<span>*</span></label>
+            <textarea class="form-control" rows="5" placeholder="오늘 진행한 활동 내용과 소감을 상세히 기록해주세요" style="resize:none;" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>활동사진 첨부<span>*</span></label>
+            <div style="border: 2px dashed #ccc; padding: 20px; text-align: center; border-radius: 6px; background: #fafafa;">
+                <input type="file" name="photo" accept="image/*" required>
+                <p style="font-size: 0.75rem; color: #888; margin-top: 8px;">(파일당 최대 10MB까지 가능합니다. 드래그하여 첨부할 수 있습니다.)</p>
+            </div>
+        </div>
+
+        <button type="submit" class="btn-submit">제출하기 →</button>
+    </form>
+</div>
         </section>
 
         <!-- 제4장 -->
