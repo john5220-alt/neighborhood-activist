@@ -1,4 +1,3 @@
-HTML
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -63,7 +62,7 @@ HTML
         /* 메인 컨테이너 */
         main {
             padding: 24px 16px;
-            max-width: 500px; /* 모바일 한손 가독성을 위한 최적 폭 제한 */
+            max-width: 500px;
             margin: 0 auto;
         }
 
@@ -484,21 +483,18 @@ HTML
 </head>
 <body>
 
-    <!-- 모바일 헤더 -->
     <header>
         <div class="logo">🤝 틈새돌봄 가이드</div>
         <a href="#form-section" class="btn-pdf" onclick="alert('가이드라인 전체 내용이 본 페이지에 포함되어 있습니다. 하단 양식을 이용해주세요.')">일지 작성</a>
     </header>
 
     <main>
-        <!-- 메인 히어로 배너 -->
         <div class="hero">
             <div class="badge">안산형 장애인 지역사회 통합돌봄</div>
             <h1>이웃이 이웃을 잇다,<br><span>틈새돌봄 이웃활동가</span></h1>
             <p>장애 당사자와 따뜻한 관계를 맺고 일상생활을 지원하며 우리 동네를 변화시키는 진정한 이웃활동가 실무 가이드입니다.</p>
         </div>
 
-        <!-- 제1장 -->
         <section>
             <div class="section-num">제1장. 이웃활동가 신분 및 지원활동</div>
             <div class="section-desc">양성교육을 이수하고 지역사회 내에서 장애 당사자의 필요에 호응하여 자율적이고 독립적으로 돌봄을 실천합니다.</div>
@@ -542,7 +538,6 @@ HTML
                 </div>
             </div>
 
-            <!-- 돈형 차트 영역 -->
             <div class="chart-card">
                 <h4>주요 활동 지원 비중 (예시)</h4>
                 <div class="chart-container">
@@ -558,7 +553,6 @@ HTML
             </div>
         </section>
 
-        <!-- 제2장 -->
         <section>
             <div class="section-num">제2장. 소통방 참여 및 활동 신청</div>
             <div class="section-desc">돌봄 매칭 요청은 카카오톡 오픈채팅방을 통해 공지됩니다. 매칭방 입장 및 신청 수칙을 확인하세요.</div>
@@ -579,21 +573,22 @@ HTML
                 </div>
             </div>
 
-            <!-- ★ 이 부분이 요청하신 내용으로 수정되었습니다 ★ -->
+            <!-- ★ 완벽하게 수정된 내용 ★ -->
             <div id="tab-1" class="tab-content">
                 <div style="font-size: 1.5rem; margin-bottom: 8px;">👤</div>
-                <p><strong>반드시 카카오톡 오픈프로필 생성</strong></p>
-                <p style="font-size: 0.85rem; color:#666; margin-top:6px;">오픈채팅방 입장 시 <strong>'카카오프렌즈'</strong>를 선택한 후, 프로필 닉네임을 아래 규칙으로 설정해 주세요.</p>
+                <p><strong>카카오프렌즈 프로필로 설정</strong></p>
+                <p style="font-size: 0.85rem; color:#666; margin-top:6px;">오픈채팅방 입장 시 <strong>'카카오프렌즈'</strong>를 선택한 후, 닉네임을 아래 규칙으로 입력해 주세요. (실명 제외)</p>
+                
                 <div class="code-badge">✏️ 안산 + 활동번호</div>
                 <p style="font-size: 0.8rem; color:#e85d04; font-weight:700;">예시: 안산1, 안산2</p>
                 
                 <div class="notice-box" style="background-color: #fff3e0; border-color: #ffe0b2; color: #e65100;">
-                    💡 <strong>활동 번호 확인 방법:</strong> 발급받으신 <strong>'위촉장' 왼쪽 상단의 끝자리 숫자</strong>가 고유 활동 번호입니다.<br>
-                    <span style="display:inline-block; margin-top:4px;">(예: 제2604-66-<strong>3</strong>호 라고 적혀 있다면 ➜ <strong>안산3</strong>)</span>
+                    💡 <strong>활동 번호 확인 방법:</strong> 발급받으신 <strong>'위촉장' 왼쪽 상단</strong>의 문서 번호 끝자리가 활동가님의 고유 활동 번호입니다.<br>
+                    <span style="display:inline-block; margin-top:4px; font-weight: bold;">(예: 제2604-66-3호 라고 적혀 있다면 ➜ 안산3)</span>
                 </div>
                 
                 <div class="notice-box" style="margin-top: 8px;">
-                    개인 프라이버시 보호를 위해 실제 얼굴 사진 대신 제공되는 <strong>카카오프렌즈 기본 캐릭터</strong>를 프로필 사진으로 활용하시는 것을 권장합니다.
+                    개인 프라이버시 보호를 위해 실제 얼굴 사진 대신 제공되는 <strong>카카오프렌즈 기본 캐릭터</strong>를 프로필 사진으로 선택해 입장해 주시기 바랍니다.
                 </div>
             </div>
 
@@ -608,7 +603,6 @@ HTML
             </div>
         </section>
 
-        <!-- 제3장 -->
         <section id="form-section">
             <div class="section-num">제3장. 활동일지(Tally) 작성 가이드</div>
             <div class="section-desc">활동 증빙 및 정산을 위해 활동 종료 후 <strong>당일 즉시</strong> 양식을 작성하여 제출해 주셔야 합니다.</div>
@@ -651,7 +645,6 @@ HTML
             </div>
         </section>
 
-        <!-- 제4장 -->
         <section>
             <div class="section-num">제4장. 꼭 지켜주세요! 필수 수칙</div>
             <div class="section-desc">상호 존중과 깊은 신뢰를 바탕으로 안전하게 운영됩니다. 아래 수칙을 준수해 주세요.</div>
@@ -693,7 +686,6 @@ HTML
             </div>
         </section>
 
-        <!-- 제5장 -->
         <section>
             <div class="section-num">제5장. 자주 묻는 질문 (FAQ)</div>
             <div class="section-desc">활동가분들이 돌봄 현장에서 가장 자주 질문하시는 핵심 실무 Q&A입니다.</div>
@@ -748,15 +740,12 @@ HTML
         </section>
     </main>
 
-    <!-- 하단 푸터 영역 -->
     <footer>
         <p>우리 동네 따뜻한 연결고리가 되어주시는 이웃활동가님,<br>진심으로 감사합니다!</p>
         <small>안산형 장애인 지역사회 통합돌봄 — 안산시장애인복지관</small>
     </footer>
 
-    <!-- 인터랙션 제어 자바스크립트 -->
     <script>
-        // 제2장 탭 전환 로직
         function switchTab(index) {
             const tabs = document.querySelectorAll('.tab-btn');
             const contents = document.querySelectorAll('.tab-content');
@@ -772,7 +761,6 @@ HTML
             });
         }
 
-        // 제4장, 5장 아코디언 토글 로직
         function toggleAccordion(header) {
             const body = header.nextElementSibling;
             header.classList.toggle('active');
@@ -784,7 +772,6 @@ HTML
             }
         }
 
-        // Tally 일지 폼 제출 시뮬레이션
         function handleFormSubmit(event) {
             event.preventDefault();
             alert('활동일지가 정상적으로 접수되었습니다. 우리 동네를 위한 따뜻한 동행에 감사드립니다!');
